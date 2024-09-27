@@ -1,0 +1,14 @@
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - OPENWEATHER_API_KEY=${OPENWEATHER_API_KEY}
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

@@ -6,6 +6,8 @@ services:
     environment:
       - NODE_ENV=production
       - OPENWEATHER_API_KEY=${OPENWEATHER_API_KEY}
+      - REDIS_URL=${REDIS_URL}
+      - REDIS_TTL=${REDIS_TTL}
     networks:
       - app-network
 
